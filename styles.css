@@ -111,7 +111,7 @@ button {
     text-align: center;
     background-color: white;
     padding: 10px;
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
 .info .info-title::before, .info .info-title::after {
@@ -138,6 +138,7 @@ button {
     width: 100%;
     gap: 3em;
     justify-content: center;
+    padding: 4em 0
 }
 
 .item {
@@ -155,4 +156,33 @@ button {
     border-bottom: 1px solid black;
     padding-bottom: 10px;
     text-align: center;
+}
+
+.quote {
+    background-color:lightgrey;
+    display: flex;
+    flex-direction: column;
+    padding: 8em calc(15% + 3em);
+    gap: 1em;
+}
+
+.quote-text {
+    font-size: 2rem;
+    font-style: italic;
+    font-weight: lighter;
+    color:rgb(61, 61, 61);
+}
+
+.quote-text::before, .quote-text::after {
+    content: '"';
+}
+
+.quote-author {
+    font-weight: bold;
+    align-self: flex-end;
+    font-size: 1.2em;
+}
+
+.quote-author::before {
+    content: "-"
 }
