@@ -99,6 +99,10 @@ button {
 .hero-img {
 	width: 100%;
 	flex: 0 1 28vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em
 }
 
 .hero-img > img {
@@ -184,10 +188,11 @@ button {
 	padding: 0 calc(15% + 3em);
 	gap: 1em;
     height: 70vh;
+    font-size: 2rem;
 }
 
 .quote-text {
-	font-size: 2rem;
+	font-size: 1em;
 	font-style: italic;
 	font-weight: lighter;
 	color: rgb(61, 61, 61);
@@ -201,7 +206,7 @@ button {
 .quote-author {
 	font-weight: bold;
 	align-self: flex-end;
-	font-size: 1.2em;
+	font-size: 0.7em;
 }
 
 .quote-author::before {
@@ -232,12 +237,13 @@ button {
 }
 
 .card-button {
-	width: 200px;
+	width: 100px;
 	padding: 10px;
 	background-color: darkred;
 	border: 2px solid white;
 	color: white;
 	align-self: center;
+    flex-shrink: 0;;
 }
 
 .card-button:hover {
@@ -255,4 +261,52 @@ footer {
     font-size: 0.9rem;
     padding: 1em;
     margin-bottom: 0.8em;
+}
+
+@media (max-width: 1100px) {
+    
+    .hero {
+        flex-direction: column;
+        height: auto;
+        padding: 3em 15%
+    }
+
+    .hero-header {
+        text-align: center;
+    }
+
+    .hero-button {
+        align-self: center;
+    }
+
+    .hero-img {
+        flex: 0;
+    }
+
+    .hero-img > img {
+        width: 80%;
+    }
+
+    .quote {
+        height: auto;
+        padding: 2em 20%;
+        font-size: 1.5rem;
+    }
+
+    .action {
+        height: auto;
+    }
+
+    .action-card {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        gap: 2em;
+        padding: 2em;
+    }
+
+    .card-button {
+        width: 200px;
+    }
 }
