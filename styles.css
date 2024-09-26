@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 * {
 	margin: 0;
@@ -266,8 +265,8 @@ button {
 }
 
 .card-button {
-	width: 100px;
-	padding: 10px;
+	width: 200px;
+	padding: 10px 0;
 	background-color: darkred;
 	border: 2px solid white;
 	color: white;
@@ -296,6 +295,15 @@ footer {
 		height: auto;
 		font-size: 1.5rem;
 		padding: 2em 20%;
+	}
+
+	.action-card {
+		flex-direction: column;
+		text-align: center;
+		align-items: center;
+		justify-content: center;
+		gap: 2em;
+		padding: 2em;
 	}
 }
 
@@ -326,15 +334,6 @@ footer {
 		height: auto;
 	}
 
-	.action-card {
-		flex-direction: column;
-		text-align: center;
-		align-items: center;
-		justify-content: center;
-		gap: 2em;
-		padding: 2em;
-	}
-
 	.card-button {
 		width: 200px;
 	}
@@ -354,6 +353,7 @@ footer {
 
 	.quote {
 		padding: 3em;
+		font-size: 1.2rem;
 	}
 
 	header {
