@@ -5,27 +5,33 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	line-height: 1.5;
+}
+
+html {
+	font-size: 18px;
 }
 
 body {
 	display: flex;
 	flex-direction: column;
 	font-family: "Merriweather", serif;
-    justify-content: center;
+	justify-content: center;
 }
 
 body > * {
 	padding: 0 15%;
 }
 
-header, footer {
-    padding-top: 1em;
-    padding-bottom: 1em;
+header,
+footer {
+	padding-top: 1em;
+	padding-bottom: 1em;
 }
 
 body > section {
-    overflow: hidden;
-    justify-content: center;
+	overflow: hidden;
+	justify-content: center;
 }
 
 a {
@@ -36,6 +42,8 @@ a {
 header {
 	background-color: rgb(233, 195, 145);
 	color: rgb(61, 61, 61);
+	box-shadow: 0 3px 16px rgba(0, 0, 0, 0.7);
+	z-index: 1;
 }
 
 ul.nav-links,
@@ -43,8 +51,16 @@ ul.other-links {
 	list-style: none;
 	display: flex;
 	justify-content: space-between;
-	gap: 1em;
+	gap: 2em;
 	align-items: center;
+}
+
+.other-links a {
+	font-weight: 700;
+}
+
+.other-links a:hover {
+	text-decoration: underline;
 }
 
 .header-logo {
@@ -65,7 +81,7 @@ ul.other-links {
 	display: flex;
 	align-items: center;
 	gap: 4em;
-    height: calc(100vh - 60px);
+	height: calc(100vh - 60px);
 }
 
 .hero-info {
@@ -89,8 +105,8 @@ ul.other-links {
 }
 
 .hero-button:hover {
-	background-color: rgb(68, 57, 42);
-	color: whitesmoke;
+	background-color: rgb(194, 194, 194);
+	border: 2px solid rgb(194, 194, 194);
 }
 
 button {
@@ -106,10 +122,10 @@ button {
 .hero-img {
 	width: 100%;
 	flex: 0 1 28vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1em
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1em;
 }
 
 .hero-img > img {
@@ -140,7 +156,7 @@ button {
 	background-color: white;
 	padding: 10px;
 	font-size: 2rem;
-    margin-top: 1em;
+	margin-top: 1em;
 }
 
 .info .info-title::before,
@@ -175,14 +191,20 @@ button {
 	padding: 1em;
 	border: 2px solid rgb(136, 33, 33);
 	border-radius: 10px;
-	flex: 0 0 300px;
+	flex: 0 0 500px;
 	display: flex;
 	flex-direction: column;
 	gap: 1em;
+	transition: all 100ms ease;
+}
+
+.item:hover {
+	box-shadow: 10px 12px rgb(73, 6, 6);
+	transform: translate(-5px, -7px);
 }
 
 .item > h3 {
-	font-size: 1.2rem;
+	font-size: 1.5em;
 	border-bottom: 1px solid black;
 	padding-bottom: 10px;
 	text-align: center;
@@ -194,8 +216,8 @@ button {
 	flex-direction: column;
 	padding: 0 calc(15% + 3em);
 	gap: 1em;
-    height: 70vh;
-    font-size: 2rem;
+	height: 100vh;
+	font-size: 2rem;
 }
 
 .quote-text {
@@ -221,9 +243,9 @@ button {
 }
 
 .action {
-    display: flex;
-    flex-direction: column;
-    height: 50vh;;
+	display: flex;
+	flex-direction: column;
+	height: 50vh;
 }
 
 .action-card {
@@ -250,7 +272,7 @@ button {
 	border: 2px solid white;
 	color: white;
 	align-self: center;
-    flex-shrink: 0;;
+	flex-shrink: 0;
 }
 
 .card-button:hover {
@@ -259,61 +281,86 @@ button {
 }
 
 footer {
-    background-color:rgb(45, 35, 7);
+	background-color: rgb(45, 35, 7);
 }
 
 .footer-text {
-    color: whitesmoke;
-    text-align: center;
-    font-size: 0.9rem;
-    padding: 1em;
-    margin-bottom: 0.8em;
+	color: whitesmoke;
+	text-align: center;
+	font-size: 0.9rem;
+	margin-bottom: 0.8em;
+}
+
+@media (max-width: 1400px) {
+	.quote {
+		height: auto;
+		font-size: 1.5rem;
+		padding: 2em 20%;
+	}
 }
 
 @media (max-width: 1100px) {
-    
-    .hero {
-        flex-direction: column;
-        height: auto;
-        padding: 3em 15%
-    }
+	.hero {
+		flex-direction: column;
+		height: auto;
+		padding: 3em 15%;
+	}
 
-    .hero-header {
-        text-align: center;
-    }
+	.hero-header {
+		text-align: center;
+	}
 
-    .hero-button {
-        align-self: center;
-    }
+	.hero-button {
+		align-self: center;
+	}
 
-    .hero-img {
-        flex: 0;
-    }
+	.hero-img {
+		flex: 0;
+	}
 
-    .hero-img > img {
-        width: 80%;
-    }
+	.hero-img > img {
+		width: 80%;
+	}
 
-    .quote {
-        height: auto;
-        padding: 2em 20%;
-        font-size: 1.5rem;
-    }
+	.action {
+		height: auto;
+	}
 
-    .action {
-        height: auto;
-    }
+	.action-card {
+		flex-direction: column;
+		text-align: center;
+		align-items: center;
+		justify-content: center;
+		gap: 2em;
+		padding: 2em;
+	}
 
-    .action-card {
-        flex-direction: column;
-        text-align: center;
-        align-items: center;
-        justify-content: center;
-        gap: 2em;
-        padding: 2em;
-    }
+	.card-button {
+		width: 200px;
+	}
+}
 
-    .card-button {
-        width: 200px;
-    }
+@media (max-width: 850px) {
+	.item {
+		flex: auto;
+	}
+
+	body > section,
+	header,
+	footer,
+	.hero {
+		padding: 1em;
+	}
+
+	.quote {
+		padding: 3em;
+	}
+
+	header {
+		font-size: 0.8rem;
+	}
+
+	ul.other-links {
+		gap: 0.7em;
+	}
 }
