@@ -243,7 +243,6 @@ button {
 
 .action {
 	display: flex;
-	flex-direction: column;
 	height: 50vh;
 	align-items: center;
 	justify-content: center;
@@ -262,13 +261,6 @@ button {
 
 .action-img {
 	height: 300px;
-}
-
-.action-img > img {
-	height: 100%;;
-}
-
-.action-img > img {
 	border-radius: 8px 0 0 8px;
 }
 
@@ -318,11 +310,16 @@ footer {
 	.action-card {
 		flex-direction: column;
 		text-align: center;
-		align-items: center;
 		justify-content: center;
+		align-items: center;
 		gap: 1em;
-		padding: 2em;
-		width: 60%;
+		padding: 0;
+		padding-bottom: 2em;
+		flex: 0 1 500px
+	}
+
+	.card-content {
+		padding: 1em;
 	}
 
 	.card-button {
@@ -331,9 +328,10 @@ footer {
 
 	.action-img {
 		transform: rotate(90deg);
-	}
-
-	.action-img > img {
+		height: 100%;
+		width: auto;
+		max-height: 500px;
+		border: none;
 		border-radius: 0;
 	}
 
@@ -360,14 +358,6 @@ footer {
 
 	.hero-img > img {
 		width: 80%;
-	}
-
-	.action {
-		height: auto;
-	}
-
-	.action-card {
-		width: 60%;
 	}
 
 	.card-button {
@@ -398,9 +388,5 @@ footer {
 
 	ul.other-links {
 		gap: 0.7em;
-	}
-
-	.action-card {
-		width: 80%;
 	}
 }
