@@ -245,22 +245,37 @@ button {
 	display: flex;
 	flex-direction: column;
 	height: 50vh;
+	align-items: center;
+	justify-content: center;
 }
 
 .action-card {
 	background-color: darkred;
 	color: white;
-	padding: 3em 8em;
 	margin: 4em 0;
 	border-radius: 8px;
 	display: flex;
-	gap: 10em;
 	justify-content: space-around;
+	gap: 2em;
+	padding-right: 2em;
+}
+
+.action-img {
+	height: 300px;
+}
+
+.action-img > img {
+	height: 100%;;
+}
+
+.action-img > img {
+	border-radius: 8px 0 0 8px;
 }
 
 .card-content {
 	display: flex;
 	flex-direction: column;
+	justify-content: center;;
 	gap: 1em;
 }
 
@@ -270,7 +285,6 @@ button {
 	background-color: darkred;
 	border: 2px solid white;
 	color: white;
-	align-self: center;
 	flex-shrink: 0;
 }
 
@@ -297,14 +311,32 @@ footer {
 		padding: 2em 20%;
 	}
 
+	.action {
+		height: auto;
+	}
+
 	.action-card {
 		flex-direction: column;
 		text-align: center;
 		align-items: center;
 		justify-content: center;
-		gap: 2em;
+		gap: 1em;
 		padding: 2em;
+		width: 60%;
 	}
+
+	.card-button {
+		margin: 0 auto;
+	}
+
+	.action-img {
+		transform: rotate(90deg);
+	}
+
+	.action-img > img {
+		border-radius: 0;
+	}
+
 }
 
 @media (max-width: 1100px) {
@@ -334,12 +366,16 @@ footer {
 		height: auto;
 	}
 
+	.action-card {
+		width: 60%;
+	}
+
 	.card-button {
 		width: 200px;
 	}
 }
 
-@media (max-width: 850px) {
+@media (max-width: 1000px) {
 	.item {
 		flex: auto;
 	}
@@ -362,5 +398,9 @@ footer {
 
 	ul.other-links {
 		gap: 0.7em;
+	}
+
+	.action-card {
+		width: 80%;
 	}
 }
